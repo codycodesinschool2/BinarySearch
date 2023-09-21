@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #202C39;
+        }
+        p{
+            color:seagreen;
+        }
+    </style>
+    <p></p>
+    <img src="../img.png"/><br/>
+    <iframe width="665" height="374" src="https://www.youtube.com/embed/W6aZKAJcNJA" title="Binary Trees (Introduction) | GeeksforGeeks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<script>
+    let txt = document.querySelector("p")
+    let text = `Binary search is a fundamental algorithm used in computer science to efficiently locate an element in a sorted list. It follows the principle of divide and conquer, reducing the search space by half with each comparison. This algorithm has been widely used since its inception due to its simplicity and effectiveness.
+The binary search begins by examining the middle element of the list. If it matches the desired value, the search is complete. Otherwise, if the desired value is smaller than the middle element, the left half of the list is discarded and the process repeats on the remaining right half. Conversely, if it is larger, then the right half is discarded and the process continues on the remaining left half.
+By repeatedly dividing and discarding halves of the list, binary search significantly reduces search time compared to linear search algorithms. In fact, it has a time complexity of O(log n), where n represents the size of the input list. This logarithmic time complexity makes binary search highly efficient even for large datasets.
+However, there is one crucial prerequisite for binary search: The input list must be sorted in ascending order. Without this condition, binary search cannot guarantee accurate results.
+In conclusion, binary search provides an elegant solution for finding elements in a sorted list with remarkable efficiency. Its divide-and-conquer approach drastically reduces searching time by eliminating unnecessary comparisons. Binary search remains a cornerstone algorithm in computer science due to its simplicity and effectiveness in solving various problems efficiently. 
+`;
+    for(let word of text.split(" ")){
+        if(word == "<br/>"){
+            txt.innerHTML += "<br/>";
+            continue
+        }
+        let len = Math.ceil(word.length/2);
+        let half = word.substring(0,len);
+        let otherHalf = word.substring(len,word.length)
+
+        console.log(word)
+        txt.innerHTML += `<b>${half}</b>${otherHalf} `;
+    }
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<a href="../">First page</a>
+</body>
+</html>
