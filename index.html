@@ -57,14 +57,14 @@
         lButton.addEventListener("click", ()=>{
             if(!cares) return;
             max=currentGuess;
-            currentGuess=Math.round(((max-min)/2)+min);
+            currentGuess=Math.floor(((max-min)/2)+min);
             updateP();
         });
 
         hButton.addEventListener("click", ()=>{
             if(!cares) return;
             min=currentGuess;
-            currentGuess=Math.round(((max-min)/2)+min);
+            currentGuess=Math.floor(((max-min)/2)+min);
             updateP();
         });
         },10000);
